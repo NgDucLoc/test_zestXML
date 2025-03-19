@@ -174,7 +174,7 @@ def prepare_zest_trn_Y_Yf(vectorizer):
 def prepare_zest_Y_Yf(label_column, vectorizer):
     with open("dataset/zero_shot_dataset_combined/zestxml/Y_Yf.txt", "w", encoding="utf-8") as wr:
         # header is number of labels SPACE number of features (i.e., numrows of Yf.txt)
-        wr.write("665 " + YF_ROW + "\n")
+        wr.write("37161 " + YF_ROW + "\n")
         for label in label_column:
             sparse_mat = vectorizer.transform([label])
             value = sparse_mat.data
@@ -201,7 +201,7 @@ def prepare_zest_X_Xf_and_X_Y():
         # write the header: num_rows num_cols
         # num_cols is taken from the Xf.txt and from the number of labels in the dataset respectively
         xf_wr.write(num_rows.__str__() + " " + XF_ROW + "\n")
-        xy_wr.write(num_rows.__str__() + " 665\n")
+        xy_wr.write(num_rows.__str__() + " 37161\n")
         for line in lines:
             line = line.strip()
             # split into 2, the [0] is labels, [1] is TfIdf features
@@ -225,7 +225,7 @@ def prepare_zest_X_Xf_and_X_Y():
         # write the header: num_rows num_cols
         # num_cols is taken from the Xf.txt and from the number of labels in the dataset respectively
         xf_wr.write(num_rows.__str__() + " " + XF_ROW + "\n")
-        xy_wr.write(num_rows.__str__() + " 665\n")
+        xy_wr.write(num_rows.__str__() + " 37161\n")
         for line in lines:
             line = line.strip()
             # split into 2, the [0] is labels, [1] is TfIdf features
@@ -249,7 +249,7 @@ def prepare_zest_X_Xf_and_X_Y():
         # write the header: num_rows num_cols
         # num_cols is taken from the Xf.txt and from the number of labels in the dataset respectively
         xf_wr.write(num_rows.__str__() + " " + XF_ROW + "\n")
-        xy_wr.write(num_rows.__str__() + " 665\n")
+        xy_wr.write(num_rows.__str__() + " 37161\n")
         for line in lines:
             line = line.strip()
             # split into 2, the [0] is labels, [1] is TfIdf features
